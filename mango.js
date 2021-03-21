@@ -1,4 +1,4 @@
-class mango{
+class Mango{
 	constructor(x,y,r)
 	{
 		var options={
@@ -11,11 +11,15 @@ class mango{
 		this.r=r
 		this.image=loadImage("images/mango.png")
 		this.body=Bodies.circle(this.x, this.y, this.r, options)
-		World.add(world, this.body);
+		World.add(userWorld, this.body);
 	}
 
 	display()
 	{
+
+		if(Matter.SAT.collides(this.body,stoneObj.body).collided === true){
+			Matter.Body.setStatic(this.body,false);
+		}
 		var mangoPos=this.body.position;	
 		push()
 		translate(mangoPos.x, mangoPos.y);

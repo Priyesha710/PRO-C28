@@ -1,4 +1,4 @@
-class ground
+class Ground
 {
 	constructor(x,y,w,h)
 	{
@@ -10,7 +10,7 @@ class ground
 		this.w=w
 		this.h=h
 		this.body=Bodies.rectangle(x, y, w, h , options);
- 		World.add(world, this.body);
+ 		World.add(userWorld, this.body);
 
 	}
 	display()

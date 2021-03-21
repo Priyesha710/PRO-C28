@@ -1,4 +1,4 @@
-class tree
+class Tree
 {
 	constructor(x,y)
 	{
@@ -10,7 +10,7 @@ class tree
 		
 		this.image=loadImage("images/tree.png")
 		this.bottomBody=Bodies.rectangle(this.x, this.y, this.treeWidth, this.treeThickness, {isStatic:true})
-		World.add(world, this.bottomBody)
+		World.add(userWorld, this.bottomBody)
 
 	}
 	
